@@ -16,6 +16,12 @@ const SearchForm = () => {
     setSearchTerm(searchValue.current.value);
   };
 
+  const randomCocktail = () => {
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const randomLetter = letters[Math.round(Math.random() * letters.length)];
+    setSearchTerm(randomLetter);
+  };
+
   return (
     <section className="section search">
       <form action="" className="search-form" onSubmit={handleSubmit}>
@@ -28,15 +34,25 @@ const SearchForm = () => {
             onChange={searchCocktail}
             autoComplete="off"
           />
-          <button
-            className="btn"
-            onClick={() => {
-              setSearchTerm("");
-              document.getElementById("name").value = "";
-            }}
-          >
-            Reset
-          </button>
+          <div className="button-container">
+            <button
+              className="btn btn-reset"
+              onClick={() => {
+                setSearchTerm("");
+                document.getElementById("name").value = "";
+              }}
+            >
+              Reset
+            </button>
+            <button
+              className="btn btn-reset btn-random"
+              onClick={() => {
+                randomCocktail();
+              }}
+            >
+              Get some random cocktails!
+            </button>
+          </div>
         </div>
       </form>
     </section>

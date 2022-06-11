@@ -6,6 +6,7 @@ Variables
 :root {
   --primaryLightColor: #d4e6a5;
   --primaryColor: #476a2e;
+  --buttonColor: #66ccff;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -90,6 +91,7 @@ Buttons
   background: transparent;
   border-radius: var(--mainBorderRadius);
   display: inline-block;
+  font-weight: bold;
 }
 .btn:hover {
   background: var(--primaryColor);
@@ -105,7 +107,7 @@ Buttons
   color: var(--primaryColor);
 }
 .btn-primary {
-  background: var(--primaryColor);
+  background: var(--buttonColor);
   color: var(--mainWhite);
   border-color: transparent;
 }
@@ -367,6 +369,16 @@ Cocktail
 .drink-info {
   padding-top: 2rem;
 }
+.drink-name {
+  background: linear-gradient(
+    309deg,
+    rgba(34, 193, 195, 1) 37%,
+    rgba(248, 253, 45, 1) 97%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
 @media screen and (min-width: 992px) {
   .drink {
     display: grid;

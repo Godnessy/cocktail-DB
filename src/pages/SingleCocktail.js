@@ -66,15 +66,12 @@ const SingleCocktail = () => {
     cocktail;
   return (
     <section className="section cocktail-section">
-      <Link to="/" className="btn btn-primary">
-        Back Home
-      </Link>
-      <h2 className="section-title">{name}</h2>
+      <h2 className="section-title drink-name">{name}</h2>
       <div className="drink">
         <img src={image} alt={name} />
         <div className="drink-info">
           <p>
-            <span className="drink-data">name:</span>
+            <span className="drink-data ">name:</span>
             {name}
           </p>
           <p>
@@ -99,6 +96,9 @@ const SingleCocktail = () => {
               return item ? <span key={index}>{item}</span> : null;
             })}
           </p>
+          <Link to="/" className="btn btn-primary">
+            Back Home
+          </Link>
         </div>
       </div>
     </section>

@@ -309,7 +309,14 @@ Form
   margin-bottom: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
-  color: var(--primaryColor);
+  color: transparent;
+  background-image: linear-gradient(
+    309deg,
+    rgb(34, 193, 195),
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  background-clip: text;
 }
 .form-control input {
   width: 100%;
@@ -320,6 +327,7 @@ Form
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+
 /* 
 ====== 
 Cocktail
